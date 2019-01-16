@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: hello-service
+
+# Discovery Server Access
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: ${eureka.url}
+
+# HTTP Server (Tomcat) Port
+server: 
+  port: ${application.port}
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled: false
